@@ -5,8 +5,8 @@
  */
 package webapp.controller;
 
-import Modelo.Libro;
-import Modelo.ListaLibros;
+import webapp.model.Libro;
+import webapp.model.ListaLibros;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -20,9 +20,15 @@ import javax.faces.bean.ViewScoped;
 public class LibroFormBean implements Serializable{
     private Libro libro;
     private ListaLibros listaLibros;
-
+    public LibroFormBean(){
+        libro = new Libro();
+        listaLibros = new ListaLibros();
+    }
     public void guardarLibro(){
-        
+        setLibro(libro);
+        getListaLibros().getListadoLibros().add(libro);
+        System.out.println("ingreso ....");
+        //this.getListaLibros().Agragar(this.getLibro());
     }
     public Libro getLibro() {
         return libro;
@@ -40,4 +46,5 @@ public class LibroFormBean implements Serializable{
     public void setListaLibros(ListaLibros listaLibros) {
         this.listaLibros = listaLibros;
     }
+    
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package webapp.model;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ public class ListaLibros {
     private ArrayList<Libro> listadoLibros;
     
     public ListaLibros(){
-        listadoLibros = new ArrayList();
+        this.listadoLibros = new ArrayList();
     }
     public ListaLibros(ArrayList<Libro> lista){
         this.listadoLibros = lista;
@@ -33,5 +33,8 @@ public class ListaLibros {
      */
     public void setListadoLibros(ArrayList<Libro> listadoLibros) {
         this.listadoLibros = listadoLibros;
+    }
+    public void Agragar(Libro libro){
+        this.listadoLibros.add(libro);
     }
 }
