@@ -21,10 +21,24 @@
                     <p:commandButton id="btnGuardar" value="Guardar" />
                 </p:panelGrid>
                 <p:panelGrid id="pnlListado" columns="4">
-                    
+                    <p:dataTable id="dtbLibros" value="" var="#{libroFormBean.listaLibros}" emptyMessage="no hay libros">
+                        <p:column headerText="ISBN">
+                            <p:outputLabel value=""/>
+                        </p:column>
+                        <p:column headerText="Libro">
+                            <p:outputLabel value=""/>
+                        </p:column>
+                        <p:column headerText="Titulo">
+                            <p:outputLabel value=""/>
+                        </p:column>
+                        <p:column headerText="Precio">
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:dataTable>
                     
                 </p:panelGrid>
             </h:form>
+           
         </p:panel>
         Hello from Facelets
     </h:body>

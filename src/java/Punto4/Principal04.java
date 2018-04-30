@@ -1,6 +1,7 @@
 package Punto4;
 
 import java.util.Scanner;
+import webapp.controller.RectanguloBean;
 
 
 public class Principal04 {
@@ -12,12 +13,12 @@ public class Principal04 {
         Scanner sc=new Scanner (System.in);
         int n;
         RectanguloBean rb =new RectanguloBean();
-        rb.llenarLista();
-        rb.verLista();
-         System.out.println("Ingrece el triangulo que desea eliminar");
-         n= sc.nextInt();
-        rb.eliminarRetangulo(n);
-        rb.verLista();
+        //rb.llenarLista();
+        //rb.verLista();
+        // System.out.println("Ingrece el triangulo que desea eliminar");
+        // n= sc.nextInt();
+        //rb.eliminarRetangulo(n);
+        //rb.verLista();
         
                 
     }

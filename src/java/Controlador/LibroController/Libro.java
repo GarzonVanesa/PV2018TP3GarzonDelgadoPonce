@@ -7,7 +7,7 @@ package Controlador.LibroController;
 
 /**
  *
- * @author 09
+ * @author 09   
  */
 public class Libro {
     
