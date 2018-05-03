@@ -7,6 +7,7 @@
         <title>Garzon Delgado Ponce</title>
     </h:head>
     <h:body>
+
         <p:panel id="test" header="Libros 2018">
             <h:form id="formLibro">
                 <p:panelGrid id="pnlLibro" columns="2">
@@ -19,7 +20,7 @@
                     <p:outputLabel id="lblPrecio" value="Ingrese Precio"/>
                     <p:inputNumber id="txtPrecio" value="#{libroFormBean.libro.precio}"/>
                     <p:commandButton id="btnGuardar" 
-                                     update="tblListadoLibros"
+                                     update="tblListadoLibros,pnlLibro"
                                      actionListener="#{libroFormBean.guardarLibro()}"
                                      value="Guardar" />
                 </p:panelGrid>
@@ -28,7 +29,10 @@
                                  value="#{libroFormBean.listaLibros.listadoLibros}" 
                                  var="libro" 
                                  emptyMessage="no hay libros"
-                                 paginator="true">
+                                 paginator="true"
+                                 rows="3"
+                                 rowsPerPageTemplate="5,10,15"
+                                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
                         <p:column headerText="ISBN">
                             <p:outputLabel value="#{libro.ISBN}"/>
                         </p:column>
@@ -42,12 +46,14 @@
                             <p:outputLabel value="#{libro.precio}"/>
                         </p:column>
                     </p:dataTable>
-                    
+
                 </p:panelGrid>
             </h:form>
-           
+
         </p:panel>
-     
+
+
+
     </h:body>
 </html>
 

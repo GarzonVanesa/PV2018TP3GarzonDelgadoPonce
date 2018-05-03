@@ -26,8 +26,14 @@ public class LibroFormBean implements Serializable{
     }
     public void guardarLibro(){
         setLibro(libro);
-        getListaLibros().getListadoLibros().add(libro);
-        System.out.println("ingreso ....");
+        listaLibros.Agragar(libro);
+        //getListaLibros().getListadoLibros().add(libro);
+        libro = new Libro();
+//        libro.setISBN("");
+//        libro.setTitulo("");
+//        libro.setAutor("");
+//        libro.setPrecio(0);
+        //System.out.println("ingreso ....");
         //this.getListaLibros().Agragar(this.getLibro());
     }
     public Libro getLibro() {

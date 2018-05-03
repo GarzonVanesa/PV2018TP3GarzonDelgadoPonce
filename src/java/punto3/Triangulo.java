@@ -5,64 +5,31 @@
  */
 package punto3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Hilarion
  */
 public class Triangulo {
-     private double A;
-    private double B;
-     private double C;
-     public Triangulo(){
-         
-     }
-     public Triangulo(double A, double B, double C) {
-        this.A = A;
-        this.B = B;
-        this.C = C;
-    }
-    public void VerificarTriagulo(){
-        
-    }
-    /**
-     * @return the A
-     */
-    public double getA() {
-        return A;
-    }
 
-    /**
-     * @param A the A to set
-     */
-    public void setA(double A) {
-        this.A = A;
-    }
 
-    /**
-     * @return the B
-     */
-    public double getB() {
-        return B;
-    }
+    int[] arreglo = new int[3];
+    public Triangulo() {
 
-    /**
-     * @param B the B to set
-     */
-    public void setB(double B) {
-        this.B = B;
     }
-
-    /**
-     * @return the C
-     */
-    public double getC() {
-        return C;
-    }
-
-    /**
-     * @param C the C to set
-     */
-    public void setC(double C) {
-        this.C = C;
+    public void menu(){
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Ingrese lado A del triangulo");
+        arreglo[0]=scan.nextInt();
+         System.out.println("Ingrese lado B del triangulo");
+        arreglo[1]=scan.nextInt();
+         System.out.println("Ingrese ladon C del triangulo");
+        arreglo[2]=scan.nextInt();
+        if (arreglo[0]+arreglo[1]>arreglo[2] && arreglo[1]+arreglo[2]>arreglo[0] && arreglo[0]+arreglo[2]>arreglo[1]){
+            System.out.println("El perimeto es " + (arreglo[0]+arreglo[1]+arreglo[2]));
+        }
+        else
+            System.out.println("El triangulo no puede armarse");
     }
 }
